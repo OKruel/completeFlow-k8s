@@ -1,4 +1,4 @@
-apiVersion: certmanager.k8s.io/v1alpha1
+apiVersion: cert-manager.io/v1alpha2
 kind: Certificate
 metadata: 
   name: olavokruel-com-tls
@@ -11,10 +11,10 @@ spec:
   dnsNames:
     - olavokruel.com
     - www.olavokruel.com
-    acme:
-      config: 
-        - http01:
-            ingressClass: nginx
-          domains:
-            - olavokruel.com
-            - www.olavokruel.com
+  acme:
+    config: 
+      - http01:
+          ingressClass: nginx
+        domains:
+          - olavokruel.com
+          - www.olavokruel.com

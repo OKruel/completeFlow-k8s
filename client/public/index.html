@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>OKruel</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="OKruel personal portfolio"/>
+  <meta name="theme-color" content="#fff"/>
+  <link rel="icon" type="image/png" href="./icons/resume-256x256.png"/>
+  <link rel="apple-touch-icon" href="./icons/resume-96x96.png"/>
+  <link rel="manifest" href="./manifest.json" />
+  <title>OKruel</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <noscript>You have to enable javascript to be able to browse this website</noscript>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', event => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(registration => console.log('Service Worker registered', registration.scope))
+          .catch(error => console.log('[index.html] Service Worker failed to register!'))
+      });
+    } else {
+      console.log('[index.html] Your browser does not support Service Workers!');
+    };
+  </script>
+</body>
+
 </html>

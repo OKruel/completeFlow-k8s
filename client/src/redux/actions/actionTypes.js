@@ -1,1 +1,1 @@
-export const TEST = 'TEST';
+export const DISPLAY_SIDEDRAWER = 'DISPLAY_SIDEDRAWER';

@@ -1,9 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './App.scss';
-import { Route, Link } from 'react-router-dom';
-import OtherPage from './pages/OtherPage';
-import Fib from './pages/Fib';
+import { Link } from 'react-router-dom';
 import layoutActions from './redux/actions/layout/layoutActions';
 import MainRoutes from './routes/mainRoutes';
 

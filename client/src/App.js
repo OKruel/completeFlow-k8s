@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import './App.css';
+import './App.scss';
 import { Link } from 'react-router-dom';
 import layoutActions from './redux/actions/layout/layoutActions';
 import MainRoutes from './routes/mainRoutes';

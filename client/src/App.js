@@ -15,8 +15,9 @@ const App = props => {
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Fib Calculator</h1>
-        <Link to="/">Home</Link>
+        <Link to="/">Fib</Link>
         <Link to="/otherpage">Other Page</Link>
+        <Link to="/home">Home Page</Link>
       </header>
       <div>
         <div onClick={() => actionsLayout.displaySideDrawer()}>Click me</div>

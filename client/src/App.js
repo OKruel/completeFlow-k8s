@@ -9,7 +9,7 @@ const App = props => {
 
   const actionsLayout = layoutActions();
 
-  const test = useSelector(state => state.layoutReducer.displaySidedrawer)
+  const test = useSelector(state => state.layoutReducer.layoutTest)
 
   return (
     <div className="App">
@@ -20,7 +20,7 @@ const App = props => {
         <Link to="/home">Home Page</Link>
       </header>
       <div>
-        <div onClick={() => actionsLayout.displaySideDrawer()}>Click me</div>
+        <div onClick={() => actionsLayout.displaySideDrawer('Click me')}>Click me</div>
           This is the reducer working in production: {test}
       </div>
       <div>
